@@ -22,15 +22,30 @@ export const CustomDropdown = ({ optType }) => {
   }, []);
 
   return (
-    <div className="h-full w-full" role="select" aria-label="Country calling code" name="countryCode">
-      <div className={`flex h-3/5 w-full  rounded-lg relative ${showDropdown ? 'bg-white' : 'bg-textbox'}`} ref={overlayRef}>
-        <div onClick={() => setShowDropdown(!showDropdown)} className="flex h-3/5 w-full rounded-lg relative ">
-          <span className="grow mt-3 ml-3 ">Label</span>
-          <span className=" mt-4 mr-3 ">
+    <div
+      className='w-full'
+      role='select'
+      aria-label='Country calling code'
+      name='countryCode'
+    >
+      <div
+        className={`flex rounded-lg relative ${showDropdown ? 'bg-white' : 'bg-textbox'}`}
+        ref={overlayRef}
+      >
+        <div
+          onClick={() => setShowDropdown(!showDropdown)}
+          className='flex w-full h-full rounded-lg relative py-[10px] items-center'
+        >
+          <span className='grow ml-3 '>Label</span>
+          <span className=' mr-3 '>
             <AiOutlineDown />
           </span>
         </div>
-        <div className={`absolute transition-all top-[55px] p-2 rounded-lg shadow-lg bg-white w-full h-full ${showDropdown ? 'inline' : 'hidden'} `}>testing</div>
+        <div
+          className={`absolute transition-all top-[55px] p-2 rounded-lg shadow-lg bg-white w-full h-full ${showDropdown ? 'inline' : 'hidden'} `}
+        >
+          testing
+        </div>
       </div>
     </div>
   );
