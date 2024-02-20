@@ -91,7 +91,6 @@ export const RangeSlider = ({
                     </div>
                   )}
                   renderThumb={({ index, props, isDragged }) => {
-                    console.log('props', props);
                     return (
                       <div
                         {...props}
@@ -139,7 +138,6 @@ export const RangeSlider = ({
                     </div>
                   )}
                   renderThumb={({ index, props, isDragged }) => {
-                    console.log('props', props);
                     return (
                       <div
                         {...props}
